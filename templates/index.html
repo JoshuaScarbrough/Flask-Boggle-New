@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Boggle Game </title>
+</head>
+
+<body>
+    <h1> Boggle Game </h1>
+
+    <section>
+
+        <table>
+            <tbody>
+
+            {% for row in createBoard %}
+            <tr>
+
+                {% for cell in row %}
+                <td>
+                    {{cell}}
+                </td>
+                {% endfor %}
+
+            </tr>
+            {% endfor %}
+
+            </tbody>
+        </table>
+
+    </section>
+
+    <section>
+
+        <form class="add-word">
+            <input name="word" class="word" autofocus>
+            <button> Enter </button>
+        </form>
+
+    </section>
+
+    <div id="response">
+
+    </div>
+
+    <div id="scoreBoard">
+
+    </div>
+
+    <div id="timeBoard">
+
+    </div>
+
+    <div id="highScore">
+
+    </div>
+
+    <script src="http://unpkg.com/jquery"></script>
+    <script src="https://unpkg.com/axios@0.19.0/dist/axios.js"></script>
+    <script src="/static/app.js"></script>
+</body>
+</html>
