@@ -1,0 +1,61 @@
+body{
+    background-color: bisque;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1{
+    text-align: center;
+    font-size: 2.5rem;
+    color: crimson;
+}
+
+#highScore{
+    margin-top: 10px;
+    color: grey;
+    font-size: 1.8rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+#scoreBoard{
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: crimson;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+#gameBoard{
+    font-size: 1.8rem;
+    display: flex;
+    justify-content: center;
+    box-sizing: content-box;
+    margin-bottom: 30px;
+}
+
+#randLetter{
+    text-align: center;
+    border: 1px solid black;
+}
+
+#response{
+    display: flex;
+    justify-content: center;
+}
+
+#userForm{
+    display: flex;
+    justify-content: center;
+}
+
+#timeBoard{
+    color: grey;
+    font-weight: bold;
+    font-size: 1.4rem;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}

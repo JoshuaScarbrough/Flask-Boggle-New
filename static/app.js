@@ -1,5 +1,5 @@
 var score = 0;
-var time = 15;
+var time = 60;
 var timer = setInterval(updateTime, 1000);
 initHighscoreDisplay();
 
@@ -30,7 +30,7 @@ $(".add-word").on("submit", async function handleSubmit(e){
 
 async function updateTime(){
     time--;
-    document.getElementById("timeBoard").innerHTML = "time left:" + time;
+    document.getElementById("timeBoard").innerHTML = "Time Left: " + time + " Seconds";
     if(time == 0){
         clearInterval(timer);
         const resp = await axios.get("/gameOver", {params: {score: score}} );
