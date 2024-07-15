@@ -59,3 +59,10 @@ h1{
     justify-content: center;
     margin-top: 10px;
 }
+
+#correctWords{
+    font-size: 1.4rem;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+}

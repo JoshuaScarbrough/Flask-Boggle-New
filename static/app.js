@@ -1,6 +1,7 @@
 var score = 0;
 var time = 60;
 var timer = setInterval(updateTime, 1000);
+var correctWords = [];
 initHighscoreDisplay();
 
 $(".add-word").on("submit", async function handleSubmit(e){
@@ -15,12 +16,18 @@ $(".add-word").on("submit", async function handleSubmit(e){
         const resp = await axios.get("/check-word", {params: {word: word}} )
         if(resp.data.result === "not-word"){
             document.getElementById("response").innerHTML = "not a word";
+            $(".word").val("")
         }else if(resp.data.result === "not-on-board"){
             document.getElementById("response").innerHTML = "not on board";
+            $(".word").val("")
         }else{
             score = score + word.length;
             document.getElementById("scoreBoard").innerHTML = "current score : " + score;
             document.getElementById("response").innerHTML = "Word";
+            correctWords.push(word);
+            document.getElementById("correctWords").innerHTML = "Correct Wrds: " + correctWords;
+            $(".word").val("")
+            
         }
     }
 
